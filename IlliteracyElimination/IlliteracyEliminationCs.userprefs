@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{3004CCC5-E095-462F-A7DB-001ADE5E1036}|Unit Tests">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="GoogleTest/GoogleTest.cs" Line="18" Column="26" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="IlliteracyEliminationCs" expanded="True">
+            <Node name="WaitsAndPageFactory" expanded="True">
+              <Node name="WaitsAndPageFactory" expanded="True">
+                <Node name="QAFestDemo" expanded="True">
+                  <Node name="Straightforward" expanded="True">
+                    <Node name="selenium" expanded="True">
+                      <Node name="StepCurrent" expanded="True">
+                        <Node name="GoogleTest" expanded="True" />
+                      </Node>
+                    </Node>
+                  </Node>
+                </Node>
+                <Node name="Straightforward" expanded="True">
+                  <Node name="nselene_as_alternative" expanded="True">
+                    <Node name="Step2Atomic" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/ayia/projects/yashaka/talks/WaitsAndPageFactoryCs/GoogleTest/Test.cs" line="50" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WaitsAndPageFactory PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

@@ -1,0 +1,63 @@
+﻿<Properties StartupConfiguration="{3004CCC5-E095-462F-A7DB-001ADE5E1036}|Unit Tests">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GoogleTest/Test.cs">
+    <Files>
+      <File FileName="GoogleTest/Test.cs" Line="25" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="WaitsAndPageFactoryCs" expanded="True">
+            <Node name="GoogleTest" expanded="True">
+              <Node name="WaitsAndPageFactory" expanded="True">
+                <Node name="Straightforward" expanded="True">
+                  <Node name="selenium" expanded="True">
+                    <Node name="Step01_SimpleE2E_FAILED" expanded="True">
+                      <Node name="GoogleTest" expanded="True" />
+                    </Node>
+                    <Node name="Step02_Option1_FAILED_PARTIALLY_FIXED_WithImplicitWaits_As_Simplest_Solution" expanded="True">
+                      <Node name="GoogleTest" expanded="True" />
+                    </Node>
+                    <Node name="Step03_Option1_FIXED_WithAdditionalExplicitWait" expanded="True">
+                      <Node name="GoogleTest" expanded="True" />
+                    </Node>
+                    <Node name="Step04_Option2_FIXED_WithExplicitWaits_WaitingFor_Locator_AsPowerfulSolution" expanded="True">
+                      <Node name="GoogleTest" expanded="True" />
+                    </Node>
+                    <Node name="Step05_WithExplicitWaitingFor_Element_AsMoreNaturalSolution_FAILED" expanded="True">
+                      <Node name="GoogleTest" expanded="True" />
+                    </Node>
+                    <Node name="Step06_WithExplicitWaitingFor_Element_FIXED_ViaPageObjectAndPageFactory" expanded="True">
+                      <Node name="GoogleTest" expanded="True" />
+                    </Node>
+                    <Node name="Step07_DeeperSearch_ForNaturalElementsManagement_FAILED" expanded="True">
+                      <Node name="GoogleTest" expanded="True" />
+                    </Node>
+                    <Node name="Step10_AtomicTests_ForHighQualityCoverage_FAILED" expanded="True">
+                      <Node name="GoogleTest" expanded="True" />
+                    </Node>
+                    <Node name="Step12_ABitMoreDRY_WithWaitsAllOverThePlace_ForSolidImplementation" expanded="True">
+                      <Node name="GoogleTest" expanded="True" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+                <Node name="WithPages_BONUS" expanded="True">
+                  <Node name="Selenium_PageObjects" expanded="True">
+                    <Node name="GoogleTest" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/ayia/projects/yashaka/talks/WaitsAndPageFactoryCs/GoogleTest/Test.cs" line="50" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WaitsAndPageFactory PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
