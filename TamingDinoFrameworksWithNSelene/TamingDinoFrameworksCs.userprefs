@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{66738BAC-57FA-4177-B8E6-B0C505F1624C}|Unit Tests">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TamingDinoFrameworksCs/TodoMVC/IntegratedToSeleniumBasedFramework/QAFestDemo/Pages/Tasks.cs">
+    <Files>
+      <File FileName="TamingDinoFrameworksCs/TodoMVC/IntegratedToSeleniumBasedFramework/QAFestDemo/TodoMVCTests.cs" Line="18" Column="13" />
+      <File FileName="TamingDinoFrameworksCs/TodoMVC/IntegratedToSeleniumBasedFramework/QAFestDemo/Pages/Tasks.cs" Line="31" Column="10" />
+      <File FileName="TamingDinoFrameworksCs/TodoMVC/IntegratedToSeleniumBasedFramework/QAFestDemo/Core/SeleniumExtensions.cs" Line="24" Column="10" />
+      <File FileName="TamingDinoFrameworksCs/BaseTest.cs" Line="21" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="TamingDinoFrameworksCs" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TamingDinoFrameworksCs PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

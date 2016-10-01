@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{66738BAC-57FA-4177-B8E6-B0C505F1624C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TamingDinoFrameworksCs</RootNamespace>
+    <AssemblyName>TamingDinoFrameworksCs</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="NSelene">
+      <HintPath>..\packages\NSelene.0.0.0.6\lib\NSelene.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\packages\Selenium.WebDriver.2.53.1\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\packages\Selenium.Support.2.53.1\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\After_NewAndUnstableOldCodeWithModernTools\TodoMVCTests.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\After_NewAndUnstableOldCodeWithModernTools\core\SeleniumExtensions.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\After_NewAndUnstableOldCodeWithModernTools\pages\Tasks.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\AfterPlus_RefactoringSpecificPageObjectsToNewConciseStyle\TodoMVCTests.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\AfterPlus_RefactoringSpecificPageObjectsToNewConciseStyle\pages\Tasks.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\AfterPlusAlternativeStyleOfNaming\TodoMVCTests.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\AfterPlusAlternativeStyleOfNaming\core\SeleniumExtensions.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\AfterPlusAlternativeStyleOfNaming\pages\Tasks.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\AfterPlusAlternativeStyleOfPageFields\pages\Tasks.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\AfterPlusPlus_SimplifyingDriverManagementForEvenMoreConciseCode\TodoMVCTests.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\AfterPlusPlus_SimplifyingDriverManagementForEvenMoreConciseCode\Pages\Tasks.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\Before\TodoMVCTests.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\Before\Core\SeleniumExtensions.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\Before\Pages\Tasks.cs" />
+    <Compile Include="BaseTest.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\QAFestDemo\TodoMVCTests.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\QAFestDemo\Core\SeleniumExtensions.cs" />
+    <Compile Include="TodoMVC\IntegratedToSeleniumBasedFramework\QAFestDemo\Pages\Tasks.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TodoMVC\IntegratedToSeleniumBasedFramework\QAFestDemo\" />
+    <Folder Include="TodoMVC\IntegratedToSeleniumBasedFramework\QAFestDemo\Core\" />
+    <Folder Include="TodoMVC\IntegratedToSeleniumBasedFramework\QAFestDemo\Pages\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
