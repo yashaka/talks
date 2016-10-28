@@ -2,6 +2,7 @@ package com.automician.workshops.widgets;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.*;
@@ -22,20 +23,13 @@ public class Row {
         return this.container.findAll("td");
     }
 
-    public SelenideElement cell(int index) {
-        return cells().get(index);
-    }
-
-    public void fillCell(int index, String value) {
-        cell(index).click();
-        cell(index).doubleClick();
-        $$(".handsontableInput").findBy(visible).setValue(value).pressEnter();
-
+    public Cell cell(int index) {
+        return new Cell(cells().get(index));
     }
 
     public void fill(String... data) {
         for(int i=0; i<size(); i++) {
-            fillCell(i, data[i]);
+            cell(i).fill(data[i]);
         }
     }
 }

@@ -8,9 +8,25 @@ public class Dialog {
     private SelenideElement container = $(".ui-dialog");
     private SelenideElement buttons = $(".dialog-buttons");
 
+    public Dialog setForLabel(String label, String value) {
+        inputFor(label).setValue(value);
+        return this;
+    }
+
+    /* + more universal and "user-friendly" (user operates texts not locators)
+
+     * >=
     public Dialog set(String cssSelector, String value) {
         this.container.find(cssSelector).setValue(value);
         return this;
+    }
+     * + more accurate
+     * - more fragile (if locator changes - test will fail,
+     *   while probability of text change is lower)
+     */
+
+    public SelenideElement inputFor(String label) {
+        return new DialogInput(this.container, label).element();
     }
 
     public void confirm() {
