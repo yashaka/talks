@@ -191,7 +191,7 @@ The meaning is the following:
     }
 ```
 
-It's very long, which may not be very good, but actually it reflects the main business flow of the grible. It's pretty good to have at least 1 such long End to End scenario implemented for "covering integration aspects of testing".
+It's very long, which may not be very good, but actually it reflects the main business flow of the grible. It's pretty good to have at least 1 (and most probably not more) such long End to End scenario implemented for "covering integration aspects of testing".
 
 The Allure Report for this scenario will look like this:
 
