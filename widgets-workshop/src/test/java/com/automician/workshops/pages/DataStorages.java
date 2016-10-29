@@ -1,15 +1,18 @@
 package com.automician.workshops.pages;
 
 import com.automician.workshops.widgets.*;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class DataStorages {
+    @Step
     public void addCategory(String name) {
         new Categories().add(name);
     }
 
+    @Step
     public void addDataStorage(String category, String name) {
 
         new Category(category)
@@ -41,10 +44,12 @@ public class DataStorages {
          */
     }
 
+    @Step
     public void save() {
         new ManageButtons().save();
     }
 
+    @Step
     public Table table() {
         return new Table();
     }

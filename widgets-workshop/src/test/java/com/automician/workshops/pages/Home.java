@@ -4,16 +4,19 @@ import com.automician.workshops.widgets.ConfirmationDialog;
 import com.automician.workshops.widgets.Dialog;
 import com.automician.workshops.widgets.Section;
 import com.codeborne.selenide.Selenide;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class Home {
+    @Step
     public void open() {
         Selenide.open("/");
     }
 
+    @Step
     public void addProduct(String name, String path) {
         $("#btn-add-product").click();
 
@@ -39,6 +42,12 @@ public class Home {
         new ConfirmationDialog().confirm();
     }
 
+    @Step
+    public void addProduct(String name) {
+        addProduct(name, name);
+    }
+
+    @Step
     public Product openProduct(String productName) {
         Section productSection =
                 new Section(productName);

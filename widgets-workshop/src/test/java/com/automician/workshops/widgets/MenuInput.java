@@ -1,6 +1,7 @@
 package com.automician.workshops.widgets;
 
 import com.codeborne.selenide.SelenideElement;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selectors.withText;
@@ -14,11 +15,13 @@ public class MenuInput {
         this.label = label;
     }
 
+    @Step
     public SelenideElement element() {
         return this.container.find(withText(this.label))
                 .find(byXpath("../input"));
     }
 
+    @Step
     public MenuInput setValue(String name) {
         element().click();
         /* needed as work-around for focus issues
@@ -31,6 +34,7 @@ public class MenuInput {
         return this;
     }
 
+    @Step
     public MenuInput click() {
         element().click();
         return this;

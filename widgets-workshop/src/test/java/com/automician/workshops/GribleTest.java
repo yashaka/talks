@@ -1,5 +1,6 @@
 package com.automician.workshops;
 
+import com.automician.workshops.configs.BaseTest;
 import com.automician.workshops.pages.DataStorages;
 import com.automician.workshops.pages.Home;
 import com.automician.workshops.pages.Product;
@@ -8,37 +9,62 @@ import com.automician.workshops.widgets.*;
 import com.codeborne.selenide.Configuration;
 import org.junit.Test;
 
+import static com.automician.worshops.core.Gherkin.*;
 import static com.codeborne.selenide.Selenide.*;
 import static java.util.Arrays.asList;
 
+public class GribleTest extends BaseTest{
+
+    /* + hides common non-test-logic technical details in a parent base class
+     * >
 public class GribleTest {
     {
         Configuration.fastSetValue = true;
         Configuration.baseUrl = "http://0.0.0.0:8123";
-        Configuration.holdBrowserOpen = true;
     }
+...
+}
+     *
+     */
 
     @Test
     public void createsTestTableBasedOnDataStorageForNewProduct() {
+        GIVEN("At Home page");
         Home home = new Home();
         home.open();
 
         String productName = "Product " + System.currentTimeMillis();
 
-        home.addProduct(productName, productName);
+        WHEN("New product created");
+        /* >
+        WHEN("New product created: " + productName);
+         */
 
+        home.addProduct(productName);
+
+        AND("Its Data Storages opened");
         Product product =
                 home.openProduct(productName);
 
         DataStorages dataStorages =
                 product.openDataStorages();
 
+        THEN("Create two Data Storages under new category created");
         dataStorages.addCategory("Users");
         dataStorages.addDataStorage("Users", "Blobs");
         dataStorages.addDataStorage("Users", "Credentials");
 
         Table storage =
                 dataStorages.table();  // or: dataStorages.storage();
+
+        EXPECT("Storage table with one column 'editme' and one empty row");
+
+        storage.shouldHaveColumnHeaders("editme");
+        storage.shouldHaveRows(
+                asList("")
+        );
+
+        THEN("edit current column name and add one more column");
 
         storage.column(0).setName("user");
         storage.addColumnAfter(0, "password");
@@ -58,17 +84,20 @@ public class GribleTest {
          * - "newcomer" need to learn more "widgets" to start using such approach
          */
 
+        THEN("Fill existing table row with data");
         storage.row(0).fill("vasya", "pupkin1234");
         storage.shouldHaveRows(
                 asList("vasya", "pupkin1234")
         );
 
+        AND("Add one more row with data");
         storage.addRowAfter(0).fill("masha", "4321ahsam");
         storage.shouldHaveRows(
                 asList("vasya", "pupkin1234"),
                 asList("masha", "4321ahsam")
         );
 
+        THEN("Save changes");
         dataStorages.save();
 
         /* + more "obvious" and friendly for "newcomer"
@@ -80,15 +109,26 @@ public class GribleTest {
          * - "newcomer" need to learn more "widgets" to start using such approach
          */
 
+        THEN("Open product test tables");
         product.open();
         TestTables testTables =
                 product.openTestTables();
 
+        AND("Add new test table under new category");
         testTables.addCategory("Users");
         testTables.addTestTable("Users", "LoginValidation");
 
         Table table =
                 testTables.table();  // or: dataStorages.storage();
+
+        EXPECT("Test table with one column 'editme' and one empty row");
+
+        storage.shouldHaveColumnHeaders("editme");
+        storage.shouldHaveRows(
+                asList("")
+        );
+
+        THEN("Configure first column to be connected to data storage prepared above");
 
         ContextMenu menu;
 
@@ -105,8 +145,11 @@ public class GribleTest {
         menu.selectFor("Data storage").selectOption("Credentials");
         menu.select("Save");
 
+        THEN("Connect first cell of this column first row from data storage");
         table.row(0).cell(0).fill("1");
         table.row(0).cell(0).hover();
+
+        EXPECT("Connection works by showing connected data in a cell tooltip (on hover)");
         table.toolTip().shouldHaveKeyRowCells("", "user", "password");
         table.toolTip().shouldHaveValueRowCells("1", "vasya", "pupkin1234");
 
@@ -115,10 +158,8 @@ public class GribleTest {
         new TableToolTip().shouldHaveValueRowCells("1", "vasya", "pupkin1234");
          */
 
-        menu = table.row(0).cell(0).menu();
-        menu.open();
-        menu.select("Insert column on the right");
-        table.column(1).setName("login valid?");
+        THEN("Adds one more column for data and fill its cell");
+        table.addColumnAfter(0, "login valid?");
 
         table.row(0).cell(1).fill("true");
 
@@ -126,6 +167,7 @@ public class GribleTest {
                 asList("1", "true")
         );
 
+        THEN("Adds one more row with both connected data storage data and new data");
         menu = table.row(0).cell(0).menu();
         menu.open();
         menu.select("Insert row below");
@@ -140,6 +182,7 @@ public class GribleTest {
         table.toolTip().shouldHaveKeyRowCells("", "user", "password");
         table.toolTip().shouldHaveValueRowCells("2", "masha", "4321ahsam");
 
+        THEN("Save changes");
         testTables.save();
 
         /* ~

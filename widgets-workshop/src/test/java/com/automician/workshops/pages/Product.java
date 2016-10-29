@@ -2,6 +2,7 @@ package com.automician.workshops.pages;
 
 import com.automician.workshops.widgets.Section;
 import com.codeborne.selenide.Selenide;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -18,6 +19,7 @@ public class Product {
         this(Integer.valueOf(id));
     }
 
+    @Step
     public DataStorages openDataStorages() {
 
         new Section("Data Storages").click();
@@ -31,10 +33,12 @@ public class Product {
         return new DataStorages();
     }
 
+    @Step
     public void open() {
         Selenide.open("/?product=" + this.id);
     }
 
+    @Step
     public TestTables openTestTables() {
 
         new Section("Test Tables").click();

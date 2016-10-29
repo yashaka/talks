@@ -1,6 +1,7 @@
 package com.automician.workshops.widgets;
 
 import com.codeborne.selenide.SelenideElement;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.byXpath;
@@ -15,6 +16,7 @@ public class DialogInput {
         this.label = label;
     }
 
+    @Step
     public SelenideElement element() {
         return this.container.find(withText(this.label))
                    .find(byXpath("./following-sibling::*/input"));
