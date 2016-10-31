@@ -143,7 +143,7 @@ The meaning is the following:
         menu.selectFor("Data storage").selectOption("Credentials");
         menu.select("Save");
 
-        THEN("Connect first cell of this column first row from data storage");
+        THEN("Connect first cell of this column to first row from data storage");
         table.row(0).cell(0).fill("1");
         table.row(0).cell(0).hover();
 
@@ -277,7 +277,7 @@ Creates test table based on data storage for new product Severity: NORMAL
 +
 [12:43:10.211] Select option [Credentials] (120ms) 1 sub-step
 [12:43:10.332] Select [Save] (112ms)
-[12:43:10.445] THEN [Connect first cell of this column first row from data storage] (0)
+[12:43:10.445] THEN [Connect first cell of this column to first row from data storage] (0)
 +
 [12:43:10.445] Row [0] (1ms) 2 sub-steps
 +

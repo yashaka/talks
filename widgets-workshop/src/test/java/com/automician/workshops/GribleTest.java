@@ -145,7 +145,7 @@ public class GribleTest {
         menu.selectFor("Data storage").selectOption("Credentials");
         menu.select("Save");
 
-        THEN("Connect first cell of this column first row from data storage");
+        THEN("Connect first cell of this column to first row from data storage");
         table.row(0).cell(0).fill("1");
         table.row(0).cell(0).hover();
 
