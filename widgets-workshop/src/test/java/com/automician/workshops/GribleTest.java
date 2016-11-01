@@ -33,6 +33,55 @@ public class GribleTest {
         Home home = new Home();
         home.open();
 
+        /* * emulates "BDD's Gherkin"
+         * + Keeps all details in Allure Report
+         *   [12:42:49.959] GIVEN [At Home page] (2ms)
+         *   [12:42:49.970] Open (4s 869ms)
+         * - kind of "Spike"
+         *   * would be great to enhance Allure Reports
+         *     to report at least classes of objects
+         *   + though not a bigger spike than "BDD as a tool for reports" ;)
+
+         * ~
+         app.home().open();
+         * * or: `_.home().open()`
+         *   underscore `_` can be chosen just as more laconic alternative
+         * + Keeps all details in Allure Report
+         *    [12:42:49.959] Home (2s)
+         *    [12:42:49.970] Open (4s 869ms)
+         *    - though these details are not so structured
+         *      as in "emulated Gherkin version"
+         *      where Gherkin GIVEN/WHEN/THEN serve as titles
+         *      (because also of non-ideal implementation in Allure
+         *      of reporting for "chainable method calls)
+         * - needs additional implementation
+         *   which may be pretty bulky
+         *   and complicated
+               (if there will be performance issues
+                (the probability is rather low though)
+                you may need to implement a "singleton" behavior
+                for such methods like home()
+                which actually just did `return new Home()`...)
+         * + though maybe even more handy in usage for newcomers
+         *   because creates a "one entry point" to all "widgets and pages" model
+         * - still not all-powerful
+         *   in case you have a long chain:
+         *     app.dataStorages().table().row(0).cell(0).fill("vasya")
+         *     app.dataStorages().table().row(0).cell(1).fill("qwerty")
+         *   you may want to break it down to
+         *     Table storage = app.dataStorages().table();
+         *
+         *     storage.row(0).cell(0).fill("vasya");
+         *     storage.row(0).cell(1).fill("qwerty");
+         *   and now all "better reporting capabilities" are broken again :(
+
+         * >
+        Home home = new Home();
+        home.open();
+         *  - lacks details in Allure Report:
+         *    [12:42:49.970] Open (4s 869ms)
+         */
+
         String productName = "Product " + System.currentTimeMillis();
 
         WHEN("New product created");
