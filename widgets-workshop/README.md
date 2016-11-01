@@ -16,7 +16,10 @@ This approach is the most powerful in languages like Java (since it does not sup
 - if for some reason you have to use OOP on your project
   - you have very very complicated UI and ugly inside, e.g. given block of elements that looks similar but have different implementation on different pages, - you have to implement some bulk operations on them (you need OOP Abstraction and Polymorphism here)
   - you have to use two browsers in one test
-    - e.g. if you are testing social network you may want to open two browsers with different users logged in, and implement some scenario including steps from different users.
+    - e.g. if you are testing social network you may want to open two browsers with different users logged in, and implement some scenario including steps from different users. So you definitely need a stateful object, remembering its driver/browser.
+  - you have a lot of pages which have the same structure but are "parametrized" with some information which is needed in the majority of page steps. This is an exact example of "object state" and case of "OOP encapsulation".
+    - usually Pages are not complicated enough in this context, and actually you need only one object of class, with no any parameters to constructor (other than driver, which can be managed automatically). So when all the time you create only one object of a page class, maybe you don't need "stateful objects" and classes, and a classic module will be completely enough, isn't it? ;)
+  - etc.
 - if you want to involve "newcomers with lack of development experience" into writing tests
   - but keeping them out of the "test framework boat"
     - implementation of test model is much more complicated with OOP approach than Procedural/Modular approach. But in usage this "OOP" Test Model is more handy and easy. Actually this project should show this (look for test scenario code below)
