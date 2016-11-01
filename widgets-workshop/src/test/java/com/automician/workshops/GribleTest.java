@@ -54,10 +54,9 @@ public class GribleTest {
         dataStorages.addDataStorage("Users", "Blobs");
         dataStorages.addDataStorage("Users", "Credentials");
 
+        EXPECT("Storage table with one column 'editme' and one empty row");
         Table storage =
                 dataStorages.table();  // or: dataStorages.storage();
-
-        EXPECT("Storage table with one column 'editme' and one empty row");
 
         storage.shouldHaveColumnHeaders("editme");
         storage.shouldHaveRows(
@@ -118,10 +117,9 @@ public class GribleTest {
         testTables.addCategory("Users");
         testTables.addTestTable("Users", "LoginValidation");
 
+        EXPECT("Test table with one column 'editme' and one empty row");
         Table table =
                 testTables.table();  // or: dataStorages.storage();
-
-        EXPECT("Test table with one column 'editme' and one empty row");
 
         storage.shouldHaveColumnHeaders("editme");
         storage.shouldHaveRows(

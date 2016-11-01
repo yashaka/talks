@@ -122,10 +122,9 @@ The meaning is the following:
         testTables.addCategory("Users");
         testTables.addTestTable("Users", "LoginValidation");
 
+        EXPECT("Test table with one column 'editme' and one empty row");
         Table table =
                 testTables.table();  // or: dataStorages.storage();
-
-        EXPECT("Test table with one column 'editme' and one empty row");
 
         storage.shouldHaveColumnHeaders("editme");
         storage.shouldHaveRows(
@@ -217,9 +216,9 @@ Creates test table based on data storage for new product Severity: NORMAL
 [12:42:59.142] Add data storage [Users, Blobs] (608ms) 11 sub-steps
 +
 [12:42:59.751] Add data storage [Users, Credentials] (759ms) 11 sub-steps
-[12:43:00.511] Table (11ms)
-[12:43:00.523] EXPECT [Storage table with one column 'editme' and one empty row] (0)
+[12:43:00.511] EXPECT [Storage table with one column 'editme' and one empty row] (0)
 +
+[12:43:00.523] Table (11ms)
 [12:43:00.524] Should have column headers [ [editme]] (352ms) 2 sub-steps
 +
 [12:43:00.876] Should have rows [[ []]] (605ms) 5 sub-steps
@@ -256,9 +255,9 @@ Creates test table based on data storage for new product Severity: NORMAL
 [12:43:07.657] Add category [Users] (546ms) 5 sub-steps
 +
 [12:43:08.204] Add test table [Users, LoginValidation] (545ms) 6 sub-steps
-[12:43:08.749] Table (0)
-[12:43:08.750] EXPECT [Test table with one column 'editme' and one empty row] (0)
+[12:43:08.749] EXPECT [Test table with one column 'editme' and one empty row] (0)
 +
+[12:43:08.750] Table (0)
 [12:43:08.750] Should have column headers [ [editme]] (468ms) 2 sub-steps
 +
 [12:43:09.218] Should have rows [[ []]] (612ms) 5 sub-steps
