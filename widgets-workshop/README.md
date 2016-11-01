@@ -1,6 +1,6 @@
 # Widgets Workshop (src files)
 
-Sources are developed and published by [Automician](automician.com) team
+Sources are developed and published by [Automician](http://automician.com) team
 
 ## About
 This project is a result of building automation from scratch for [Grible](grible.org) in the "more or less" true OOP style:) 
