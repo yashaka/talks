@@ -6,6 +6,9 @@ import com.automician.workshops.pages.Home;
 import com.automician.workshops.pages.Product;
 import com.automician.workshops.pages.TestTables;
 import com.automician.workshops.widgets.*;
+import com.automician.workshops.widgets.paradigmshift.Form;
+import com.automician.workshops.widgets.paradigmshift.InputValue;
+import com.automician.workshops.widgets.paradigmshift.SelectValue;
 import com.codeborne.selenide.Configuration;
 import org.junit.Test;
 
@@ -187,9 +190,25 @@ public class GribleTest {
          * + more laconic
          * - less readable because too long
          */
+
         menu.inputFor("Column name").setValue("user");
         menu.inputFor("Data storage").click();
         menu.selectFor("Data storage").selectOption("Credentials");
+
+        /* ~
+        new Form(menu.element()).fill(
+                new InputValue("Column name", "user"),
+                new SelectValue("Data storage", "Credentials")
+        );
+         */
+
+        /* <
+        menu.form().fill(
+                ValueFor.input("Column name", "user"),
+                ValueFor.select("DataStorage", "Credentials")
+        );
+        */
+
         menu.select("Save");
 
         THEN("Connect first cell of this column to first row from data storage");

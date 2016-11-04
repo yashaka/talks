@@ -18,7 +18,7 @@ public class Dialog {
     /* + more universal and "user-friendly" (user operates texts not locators)
 
      * >=
-    public Dialog set(String cssSelector, String value) {
+    public Dialog setInDialog(String cssSelector, String value) {
         this.container.find(cssSelector).setValue(value);
         return this;
     }

@@ -64,6 +64,10 @@ public class ContextMenu {
     public MenuSelect selectFor(String label) {
         return new MenuSelect(this.container, label);
     }
+
+    public SelenideElement element() {
+        return this.container;
+    }
     /* + consistent with previous implementation for ContextMenu#inputFor
 
      * ~
