@@ -1,0 +1,51 @@
+* modules = boxes with tools
+  * modules in java = classes with public static methods
+
++ comes to the rescue when you have to use "page step-procedures" in more than one test class
+  * i.e. when you need to take a "box with tools" from garage to some other place, where you need to use these tools"
+
+    * in java:
+      "take a Box to" other class
+
+        = import static <box packages>.Box.*;
+          ...
+          tool1();
+          tool2();
+
+        OR
+        = import <box packages>.Box;
+          ...
+          Box.tool1();
+          Box.tool2();
+
+        OR if you have similar tools in different boxes
+           and want to resolve name conflicts
+        OR just want to emphasize context
+        = import <box packages>.GreenBox;
+          import <box packages>.RedBox;
+          ...
+          GreenBox.tool1();
+          RedBox.tool1()
+          GreenBox.tool2();
+          RedBox.tool3()
+
+
+          Good example for resolving name conflicts can be met
+          when you opens several pages in one test:
+
+            Login.open();                    /* <<< */
+            Login.doLogin("user", "qwerty");
+            Main.checkMail(...);
+            Settings.open();                 /* <<< */
+
++ good for widgets (which has no state)
+  i.e. parts of a Page which you want to reflect in code
+  as separate entities for one of the following reason:
+  * break down complex page into smaller more simple ones
+  * emphasize some page page parts
+  * reuse repeatable "html blocks" on different pages
+
+  - not so handy for new-comers in usage when widgets are nested too deep
+
+
+- does not work, when you need to remember a state in a "box", i.e. clone box based on its state
