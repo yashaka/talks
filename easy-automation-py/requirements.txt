@@ -1,0 +1,2 @@
+pytest
+selene==1.0.0a6
