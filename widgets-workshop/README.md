@@ -5,6 +5,10 @@ Sources are developed and published by [Automician](http://automician.com) team
 ## About
 This project is a result of building automation from scratch for [Grible](grible.org) in the "more or less" true OOP style:) 
 
+
+It is part of the ["Test Automation from Scratch with Widgets" course (Russian version)](https://seleniumcourses.com/collections/frontpage/products/selenium-webdriver-java-test-automation-from-scratch-with-widgets-pageobjects)
+
+
 Grible is rather useless web app, but with pretty complicated UI (many complex elements/blocks repeated through different pages, excel-style talbes, etc.), implemented under the hood in rather ugly way. This makes it very good example in context of automation;)
 
 "The true OOP" style means that test model (pages, complex blocks of elements) are implemented using "more or less" OOP approach, where every "block of html elements" that reflect some real "entity on UI" is represented in the code as an object (aka widget or ElementObject). 

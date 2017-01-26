@@ -5,6 +5,8 @@ Sources are developed and published by [Automician](http://automician.com) team
 ## About
 This project is a result of applying and comparing different programming paradigms for building web ui automation. 
 
+It is part of the ["Paradigm Shift" course (Russian version)](https://seleniumcourses.com/products/paradigm-shift-selenide-java-in-russian)
+
 The following applications are used as systems under tests:
 - [TodoMVC](todomvc4tasj.herokuapp.com)
 - [Grible](grible.org)
