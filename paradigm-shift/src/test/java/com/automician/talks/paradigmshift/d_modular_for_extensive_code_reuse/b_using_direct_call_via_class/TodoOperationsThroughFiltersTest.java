@@ -10,7 +10,7 @@ public class TodoOperationsThroughFiltersTest {
 
     @Test
     public void filtersActive() {
-        GivenTodoMvc.withTasks(
+        GivenTodoMvc.with(
                 new ActiveTask("a"),
                 new CompletedTask("b"),
                 new ActiveTask("c"));
@@ -21,7 +21,7 @@ public class TodoOperationsThroughFiltersTest {
 
     @Test
     public void filtersCompleted() {
-        GivenTodoMvc.withTasks(
+        GivenTodoMvc.with(
                 new ActiveTask("a"),
                 new CompletedTask("b"),
                 new ActiveTask("c"));
@@ -32,7 +32,7 @@ public class TodoOperationsThroughFiltersTest {
 
     @Test
     public void filtersAll() {
-        GivenTodoMvc.withTasks(
+        GivenTodoMvc.with(
                 new ActiveTask("a"),
                 new CompletedTask("b"),
                 new ActiveTask("c"));

@@ -1,6 +1,5 @@
 package com.automician.talks.paradigmshift.d_modular_for_extensive_code_reuse.a_using_static_import;
 
-import com.automician.talks.paradigmshift.c_procedural_to_hide_complexity_when_scared_but_needed.ii_hide_structural_complexity.TodoMvcTest;
 import com.automician.talks.paradigmshift.helpers.ActiveTask;
 import com.automician.talks.paradigmshift.helpers.CompletedTask;
 import com.automician.talks.paradigmshift.helpers.GivenTodoMvc;
@@ -40,7 +39,7 @@ public class TodoOperationsAtAllFilterTest {
 
     @Test
     public void clearsCompletedTasks() {
-        GivenTodoMvc.withTasks(
+        GivenTodoMvc.with(
                 new ActiveTask("a"),
                 new CompletedTask("b"),
                 new ActiveTask("c"),

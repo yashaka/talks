@@ -59,7 +59,7 @@ public class TodoMvcTest {
 
     @Test
     public void clearsCompletedTasks() {
-        GivenTodoMvc.withTasks(
+        GivenTodoMvc.with(
                 new ActiveTask("a"),
                 new CompletedTask("b"),
                 new ActiveTask("c"),
@@ -72,7 +72,7 @@ public class TodoMvcTest {
 
     @Test
     public void filtersActive() {
-        GivenTodoMvc.withTasks(
+        GivenTodoMvc.with(
                 new ActiveTask("a"),
                 new CompletedTask("b"),
                 new ActiveTask("c"));
@@ -83,7 +83,7 @@ public class TodoMvcTest {
 
     @Test
     public void filtersCompleted() {
-        GivenTodoMvc.withTasks(
+        GivenTodoMvc.with(
                 new ActiveTask("a"),
                 new CompletedTask("b"),
                 new ActiveTask("c"));
@@ -94,7 +94,7 @@ public class TodoMvcTest {
 
     @Test
     public void filtersAll() {
-        GivenTodoMvc.withTasks(
+        GivenTodoMvc.with(
                 new ActiveTask("a"),
                 new CompletedTask("b"),
                 new ActiveTask("c"));

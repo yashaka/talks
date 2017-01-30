@@ -40,7 +40,7 @@ public class TodoOperationsAtAllFilterTest {
 
     @Test
     public void clearsCompletedTasks() {
-        GivenTodoMvc.withTasks(
+        GivenTodoMvc.with(
                 new ActiveTask("a"),
                 new CompletedTask("b"),
                 new ActiveTask("c"),

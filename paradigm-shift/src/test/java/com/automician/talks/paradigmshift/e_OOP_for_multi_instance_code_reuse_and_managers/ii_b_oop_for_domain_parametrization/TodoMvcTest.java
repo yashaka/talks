@@ -1,14 +1,11 @@
 package com.automician.talks.paradigmshift.e_OOP_for_multi_instance_code_reuse_and_managers.ii_b_oop_for_domain_parametrization;
 
-import com.automician.talks.paradigmshift.e_OOP_for_multi_instance_code_reuse_and_managers.core.SelenideDriver;
 import com.automician.talks.paradigmshift.e_OOP_for_multi_instance_code_reuse_and_managers.ii_b_oop_for_domain_parametrization.pages.TodoMvcPage;
 import com.automician.talks.paradigmshift.helpers.ActiveTask;
 import com.automician.talks.paradigmshift.helpers.CompletedTask;
 import com.automician.talks.paradigmshift.helpers.GivenTodoMvc;
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 
@@ -48,7 +45,7 @@ public class TodoMvcTest {
 
     @Test
     public void filtersCompletedFromActive() {
-        GivenTodoMvc.withTasks(
+        GivenTodoMvc.with(
                 new ActiveTask("a"),
                 new CompletedTask("b"),
                 new ActiveTask("c"));
