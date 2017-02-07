@@ -6,11 +6,11 @@ package com.automician.talks.kisspageobjects.diaspora;
 public class SecretData {
     public static class Yashaka {
         public static final String username = "yashaka";
-        public static final String password = "yagniyagni";
+        public static final String password = "secret";
     }
 
     public static class Selenide {
         public static final String username = "selenide";
-        public static final String password = "yagniyagni";
+        public static final String password = "secret";
     }
 }
